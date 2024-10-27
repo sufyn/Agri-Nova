@@ -1,0 +1,150 @@
+{% extends 'base.html' %} {% block title %} Home {% endblock title %} {% block body %}
+
+<!--cart section-->
+<div class="hero-image1">
+    <div class="hero-text1">
+        <h2 class="breadcrumbs text-white display-3" style="font-family: 'Amatic SC', cursive; font-weight: bolder;">
+            <span class="mr-2"></span>
+            Revolutionizing Agriculture
+        </h2>
+        
+
+
+
+        
+        <p class="mb-0 bread font-weight-bold">
+            Empowering farmers with cutting-edge technology and sustainable practices
+        </p>
+        <br />
+        <p><a href="#services" class="btn view rounded-pill">Explore Our Services</a></p>
+    </div>
+</div>
+<!--/cart section-->
+<br />
+
+<!--about us-->
+<section>
+    <div class="container">
+        <h1 class="text-center text-capitalize pt-5" style="font-family: 'Playfair Display', serif; font-weight: bold;">About us</h1>
+        <hr class="w-25 mx-auto" />
+
+        <div class="row mb-5">
+            <div class="col-lg-6 col-md-6 col-12">
+                <!-- <img src="{{ url_for('static', filename='images/3.jpeg') }}" class="img-fluid w-100" /> -->
+                <figure class="snip1256">
+                    <img src="{{ url_for('static', filename='images/aboutimage.jpg') }}" alt="sample42" />
+                    <figcaption>
+                        <h3>Transforming Agriculture, One Byte at a Time</h3>
+                        <h4 class="mt-4 mb-4">AI-Driven Solutions for Smarter Farming</h4>
+                        <p><a href="{{ url_for('aboutus') }}" class="read-more">Learn more</a></p>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-lg-6" style="font-family: 'Poppins', sans-serif;"
+            >
+                <h3 class="mt-4">
+                    Improving Agriculture, Improving Lives, Cultivating Crops To Make Farmers Increase Profit.
+                </h3>
+                <p class="mt-3" style="line-height: 1.6">
+                    We use state-of-the-art machine learning and deep learning technologies to help you guide through the entire farming process. Make informed decisions to understand the demographics of your area, understand the factors that affect your crop and keep them
+                    healthy for a super awesome successful yield.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--about us end-->
+
+<!--service part-->
+<section id="services">
+    <div class="container">
+        <h1 class="text-center text-capitalize pt-5" style="font-family: 'Playfair Display', serif; font-weight: bold;">Our services</h1>
+        <hr class="w-25 mx-auto" />
+
+        <div class="row text-center mb-5 p-3">
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card bg-dark text-white card1" style="font-family: 'Montserrat', sans-serif; font-weight: 600;">
+                    <img class="card-img-top" src="{{url_for('static', filename='images/crop.jpg')}}" alt="Card image" />
+                    <div class="card-body">
+                        <h4 class="card-title">CROP RECOMMENDATION</h4>
+                        <p class="card-text">Recommendation about the type of crops to be cultivated which is best suited for the respective conditions.</p>
+                        <p><a href="{{ url_for('crop_recommend') }}" class="btn view rounded-pill">View Details</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card bg-dark text-white card1" style="font-family: 'Montserrat', sans-serif; font-weight: 600;">
+                    <img class="card-img-top" src="{{ url_for('static', filename='images/fertilizer.jpg') }}" alt="Card image" />
+                    <div class="card-body">
+                        <h4 class="card-title">FERTILIZER</h4>
+                        <p class="card-text">Recommendation about the type of fertilizer best suited for the particular soil and the recommended crop</p>
+                        <p><a href="{{ url_for('fertilizer_recommendation') }}" class="btn view rounded-pill">View Details</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card bg-dark text-white card1" style="font-family: 'Montserrat', sans-serif; font-weight: 600;">
+                    <img class="card-img-top" src="{{ url_for('static', filename='images/ecommerce.jpg') }}" alt="Card image" />
+                    <div class="card-body">
+                        <h4 class="card-title">E-COMMERCE</h4>
+                        <p class="card-text">Discover quality fruits and vegetables sourced directly from local farmers. Support sustainable agriculture with Agrinova E-Commerce, where freshness meets convenience!</p>
+                        <p><a href="http://localhost/agrocraft/Ecommerce/" class="btn view rounded-pill">Visit Our E-Commerce Store.</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card bg-dark text-white card1" style="font-family: 'Montserrat', sans-serif; font-weight: 600;">
+                    <img class="card-img-top" style="width: auto;height: auto" src="{{ url_for('static', filename='images/market.jpg') }}" alt="Card image" style="width: 380px; height: auto;" />
+                    <div class="card-body">
+                        <h4 class="card-title">MARKET ANALYSIS</h4>
+                        <p class="card-text">Market analysis helps farmers understand demand trends and set better prices, leading to smarter crop planning and higher profits.</p>
+                        <p><a href="{{ url_for('price_recommendation') }}" class="btn view rounded-pill">View Details</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card bg-dark text-white card1" style="font-family: 'Montserrat', sans-serif; font-weight: 600;">
+                    <img class="card-img-top" src="{{ url_for('static', filename='images/b.jpg') }}" alt="Card image" />
+                    <div class="card-body">
+                        <h4 class="card-title"> PLANT DISEASE DETECTION</h4>
+                        <p class="card-text">Predicting the name and causes of crop disease and suggestions to cure it
+                        </p>
+                        <p><a href="{{ url_for('disease_prediction') }}" class="btn view rounded-pill">View Details</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--services end-->
+
+
+
+<!-- footer section start-->
+
+<footer class="page-footer font-small blue">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 bg-dark text-light p-2" style="background-image: url(https://images.pexels.com/photos/5980/food-sunset-love-field.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);background-size: cover; height: 100px; background-position: center; position:center; font-family: 'Arima Madurai', cursive;">
+        <h5> © 2024 AgriNova: Pioneering Sustainable Agriculture through Technology
+            
+</h5>       
+            <div class="text-center text-white text-uppercase font-weight-bold">Grow Green, Live Clean...</div>
+        </h5>
+    </div>
+
+    <!-- Copyright -->
+</footer>
+
+<!-- footer section end -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+{% endblock body %}

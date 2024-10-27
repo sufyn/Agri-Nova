@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <title>
+      {% block title %} AgriNova - Empowering Farmers with Technology {%
+      endblock title %}
+    </title>
+    <!-- Include Google Translate Script -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,hi,bn,te,mr,kn,gu,pa,ta,ml,ur,as,or,sd",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </head>
+
+  <body>
+    <header class="bg-white shadow-md">
+      <div
+        class="container-fluid p-4 d-flex justify-content-between align-items-center"
+      >
+        <!-- Logo Section -->
+        <div class="d-flex align-items-center">
+          <img
+            src="{{ url_for('static', filename='images/tractor.png') }}"
+            alt="Tractor Icon"
+            style="height: 40px; width: 40px; margin-right: 10px"
+          />
+          <h1 class="text-success fw-bold" style="margin: 0">AgriNova</h1>
+        </div>
+        <!-- Add the Google Translate Element where you want it to appear -->
+        <div id="google_translate_element"></div>
+        <!-- Navigation Links -->
+        <nav>
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="{{ url_for('hello_world') }}"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="{{ url_for('aboutus') }}"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="{{ url_for('contact') }}"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Authentication Buttons -->
+        <div class="d-flex gap-3">
+          <a
+            href="{{ url_for('login') }}"
+            class="btn btn-success text-white px-4 py-2"
+          >
+            Login
+          </a>
+          <a
+            href="{{ url_for('signup') }}"
+            class="btn btn-outline-secondary px-4 py-2"
+          >
+            Sign Up
+          </a>
+        </div>
+      </div>
+    </header>
+
+    {% block body %} {% endblock body %}
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JavaScript to Set Language Based on LocalStorage -->
+    <script type="text/javascript">
+      window.onload = function () {
+        const selectedLanguage = localStorage.getItem("selectedLanguage");
+        if (selectedLanguage) {
+          // Set Google Translate to the saved language
+          const googleTranslateElement =
+            document.querySelector(".goog-te-combo");
+          if (googleTranslateElement) {
+            googleTranslateElement.value = selectedLanguage;
+            googleTranslateElement.dispatchEvent(new Event("change"));
+          }
+        }
+      };
+    </script>
+  </body>
+</html>

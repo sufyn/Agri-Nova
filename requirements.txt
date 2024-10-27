@@ -1,0 +1,14 @@
+Flask
+Flask-SQLAlchemy
+Flask-Login
+Flask-WTF
+Flask-Bcrypt
+bcrypt
+numpy
+pandas
+torch
+torchvision
+requests
+Pillow
+scikit-learn==1.5.2
+SQLAlchemy
