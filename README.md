@@ -29,11 +29,10 @@ Agri-Nova leverages cutting-edge technologies in AI, IoT, and data analytics to 
 
 ## Tech Stack
 
-- **Frontend**: React.js, HTML, CSS
-- **Backend**: Node.js, Express
-- **Database**: MongoDB
+- **Frontend**: Js, HTML, CSS
+- **Backend**: Flask
+- **Database**: MySql
 - **Machine Learning**: Python, TensorFlow, OpenCV
-- **IoT**: Sensor integration for soil health analysis
 - **Cloud Services**: Azure/AWS for data processing and storage
 
 ## Installation
