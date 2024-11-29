@@ -2,6 +2,8 @@
 
 **Agri-Nova** is an innovative project designed to support farmers in making informed decisions and maximizing agricultural productivity. By providing insights into soil health, plant disease detection, market trend analysis, and sustainable farming practices, Agri-Nova addresses key challenges in the agricultural sector and empowers farmers with actionable data to improve yield and resource efficiency.
 
+PPT LINK: https://stdntpartners-my.sharepoint.com/:p:/g/personal/mohammedsufyaan_talish_studentambassadors_com/EakiQ9EbmZBCtNthSsOO4RMBgFeUWW9B65AFg4VKt6wSTQ?e=t6Nhlc
+
 ## Problem Statement
 
 Farmers face numerous daily challenges:
